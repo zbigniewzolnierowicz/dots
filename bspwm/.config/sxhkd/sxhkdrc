@@ -73,6 +73,12 @@ super + bracket{left,right}
 super + shift + bracket{left,right}
 	bspc node -d '{prev,next}'
 
+button{8,9}
+	bspc desktop -f {prev,next}.local
+
+shift + button{8,9}
+	bspc node -d '{prev,next}'
+
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last
