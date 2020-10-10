@@ -137,3 +137,6 @@ XF86AudioMute
 
 Print
 	maim -s -r crosshair | xclip -t image/png -selection clipboard
+
+alt + Tab
+	bspc node -f last

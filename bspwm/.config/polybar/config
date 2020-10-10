@@ -1,0 +1,83 @@
+[colors]
+background = ${xrdb:color0:#000000}
+background_alt = ${xrdb:color18:#222}
+foreground = ${xrdb:color7:#ffffff}
+foreground_alt = ${xrdb:color8:#ffffff}
+primary = ${xrdb:color1:#ffb52a}
+secondary = ${xrdb:color10:#e60053}
+alert = ${xrdb:color9:#bd2c40}
+
+[bar/top]
+monitor = HDMI-1
+monitor-fallback = eDP1
+
+bottom = false
+
+fixed-center = true
+
+width = 100%
+height = 20
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+
+font-0 = artwiz lemon:size=9:antialias=false
+font-1 = Font Awesome 5 Free:size=8
+
+modules-left = bspwm
+modules-center = title
+modules-right = time
+
+tray-position = right
+
+tray-detached = false
+
+tray-maxsize = 8
+
+wm-restack = bspwm
+
+padding-left = 1
+padding-right = 1
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+reverse-scroll = false
+
+format = <label-state>
+
+label-focused = 
+label-focused-foreground = ${colors.foreground}
+label-focused-padding = 1
+
+label-occupied = 
+label-occupied-foreground = ${colors.foreground_alt}
+label-occupied-padding = 1
+
+label-empty = 
+label-empty-foreground = ${colors.foreground_alt}
+label-empty-padding = 1
+
+label-urgent = 
+label-urgent-foreground = ${colors.alert}
+
+
+[module/time]
+type = internal/date
+date = %Y-%m-%d
+time = %H:%M
+date-alt = %a, %d %b %Y
+time-alt = %H:%M:%S
+
+label = %time%, %date%
+
+[module/title]
+type = internal/xwindow
+label = %title%
+label-maxlen = 50
+
+; vim:ft=dosini
