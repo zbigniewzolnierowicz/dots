@@ -26,6 +26,7 @@ source ~/.zshenv
 source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-syntax-highlighting"
 zplug "dracula/zsh", as:theme
 
 # Install plugins if there are plugins that have not been installed
