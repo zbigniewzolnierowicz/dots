@@ -16,19 +16,19 @@ bottom = false
 fixed-center = true
 
 width = 100%
-height = 20
+height = 30
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0
 
-font-0 = artwiz lemon:size=9:antialias=false
-font-1 = Font Awesome 5 Free:size=8
+font-0 = cherry:size=13:antialias=false
+font-1 = Font Awesome 5 Free Solid:size=8
 
 modules-left = bspwm
 modules-center = title
-modules-right = time
+modules-right = backlight battery time
 
 tray-position = right
 
@@ -40,6 +40,8 @@ wm-restack = bspwm
 
 padding-left = 1
 padding-right = 1
+
+module-margin = 1
 
 [module/bspwm]
 type = internal/bspwm
@@ -79,5 +81,47 @@ label = %time%, %date%
 type = internal/xwindow
 label = %title%
 label-maxlen = 50
+
+[module/battery]
+type = internal/battery
+full-at = 98
+battery = BAT0
+adapter = AC
+
+padding-left = 1
+padding-right = 1
+
+format-charging = <animation-charging> <label-charging>
+label-charging = AC %percentage%%
+
+format-discharging = <animation-discharging> <label-discharging>
+label-discharging = BAT %percentage%%
+
+label-fill = FULL
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+
+enable-scroll = true
+
+format =  <bar>
+
+bar-width = 10
+bar-indicator = |
+bar-fill = -
+bar-empty = -
 
 ; vim:ft=dosini
