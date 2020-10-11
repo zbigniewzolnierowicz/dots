@@ -34,7 +34,7 @@ tray-position = right
 
 tray-detached = false
 
-tray-maxsize = 8
+tray-maxsize = 12
 
 wm-restack = bspwm
 
