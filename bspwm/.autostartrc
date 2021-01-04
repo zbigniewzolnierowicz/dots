@@ -1,7 +1,6 @@
 wmname LG3D &
 eval `ssh-agent -s` &
 xsetroot -cursor_name left_ptr &
-picom &
 bash ~/.screenlayout/screen.sh && bash ~/.fehbg &
 udiskie &
 dunst &
