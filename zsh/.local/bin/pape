@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+FALLBACK_WALLPAPER_PATH="$HOME/Pictures/Wallpapers"
+WALLPAPER_PATH=${WALLPAPER_PATH:-$FALLBACK_WALLPAPER_PATH}
+
+WALLPAPER=`ls -d $WALLPAPER_PATH/* | fzf`
+feh --bg-fill "$WALLPAPER"
