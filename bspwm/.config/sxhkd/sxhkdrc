@@ -136,13 +136,13 @@ super + {_, shift} + r
 	bspc node @/ -R {90,-90}
 
 XF86AudioLowerVolume
-	pactl set-sink-volume 0 -2%
+	pactl set-sink-volume @DEFAULT_SINK@ -2%
 
 XF86AudioRaiseVolume
-	pactl set-sink-volume 0 +2%
+	pactl set-sink-volume @DEFAULT_SINK@ +2%
 
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 Print
 	maim -s -r crosshair | xclip -t image/png -selection clipboard
