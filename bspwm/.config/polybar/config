@@ -8,7 +8,7 @@ secondary = ${xrdb:color10:#e60053}
 alert = ${xrdb:color9:#bd2c40}
 
 [bar/top]
-monitor = HDMI-1
+monitor = DP-0
 monitor-fallback = eDP1
 
 bottom = false
