@@ -7,3 +7,4 @@ dunst &
 pulseaudio -D &
 setxkbmap pl &
 picom --config /home/zed/.config/picom.conf &
+numlockx on &
