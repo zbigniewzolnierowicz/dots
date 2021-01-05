@@ -4,4 +4,6 @@ xsetroot -cursor_name left_ptr &
 bash ~/.screenlayout/screen.sh && bash ~/.fehbg &
 udiskie &
 dunst &
+pulseaudio -D &
+setxkbmap pl &
 picom --config /home/zed/.config/picom.conf &
